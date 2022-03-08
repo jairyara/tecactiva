@@ -1,0 +1,11 @@
+{
+  "name": "Prueba técnica Tecactiva",
+  "version": "0.1.0",
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
+  "scripts": {
+    "sass": "sass ./assets/sass/style.scss ./css/style.css",
+    "sass-watch": "sass --watch ./assets/sass/style.scss ./css/style.css"
+  }
+}

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('./../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $bg-color;
+    font-family: $primary-font;
+}
+
+.container-element {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.brand-logo {
+    height: 60px;
+}
