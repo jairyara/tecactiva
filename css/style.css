@@ -43,6 +43,33 @@ body {
     opacity: 0;
   }
 }
+label {
+  text-transform: capitalize;
+}
+
+input, select {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #9F9DFF;
+}
+
+select {
+  text-transform: capitalize;
+}
+
+option {
+  height: 30px;
+  text-transform: capitalize;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  accent-color: #5463FF;
+}
+
 .btn {
   width: 200px;
   height: 45px;
@@ -289,16 +316,6 @@ body {
   justify-content: space-around;
   flex-direction: column;
 }
-.login__content--info form label {
-  text-transform: capitalize;
-}
-.login__content--info form input {
-  width: 100%;
-  height: 45px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #9F9DFF;
-}
 .login__content--info form .btn-primary {
   margin: 0 auto;
 }
@@ -307,6 +324,173 @@ body {
 }
 .login__content--info div p {
   margin-bottom: 15px;
+}
+
+.signUp {
+  width: 100%;
+  min-height: 60vh;
+}
+.signUp__content--info h2 {
+  margin: 50px 0;
+  font-size: 32px;
+  color: #121212;
+  text-align: center;
+}
+.signUp__content--info .signUp-progress {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.signUp__content--info .signUp-progress .dot {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #CCCCCC;
+  border: 1px solid #0E3BCD;
+  border-radius: 50%;
+}
+.signUp__content--info .signUp-progress .dot-active {
+  background-color: #5463FF;
+  color: #FAFAFA;
+  font-size: 18px;
+  font-weight: 600;
+}
+.signUp__content--info .signUp-progress div {
+  position: absolute;
+  z-index: -1;
+  width: 60%;
+  height: 1px;
+  border: 1px solid #0E3BCD;
+}
+.signUp__content--info form {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .signUp__content--info form {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.signUp__content--info form div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.signUp__content--info form div .btn-secondary {
+  margin-right: 10px;
+}
+.signUp__content--info form h4 {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+.signUp__content--info form .terms {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.signUp__content--info form .terms input {
+  margin-right: 15px;
+}
+.signUp__content--info #two-step, .signUp__content--info #three-step {
+  display: none;
+}
+.signUp__content--info .step-active {
+  display: flex;
+  animation: fadeIn 1s both;
+}
+.signUp__content--info .step-disable {
+  display: none;
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 90px);
+  display: grid;
+  place-content: center;
+  background-image: url("./../assets/img/hero-bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__content {
+  display: grid;
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: none;
+}
+.hero__content h1 {
+  margin-bottom: 20px;
+  color: #121212;
+  text-align: center;
+}
+.hero__content button {
+  margin: 0 auto;
+}
+
+.projects {
+  width: 100%;
+  margin: 50px 0;
+}
+@media (min-width: 900px) {
+  .projects__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(50% - 30px));
+    gap: 30px;
+  }
+}
+.projects__content figure {
+  width: 100%;
+  margin-bottom: 30px;
+}
+@media (min-width: 900px) {
+  .projects__content figure {
+    margin-bottom: 0;
+  }
+}
+.projects__content figure img {
+  width: 100%;
+}
+.projects__content--description h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #121212;
+}
+.projects__content--description p {
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.about {
+  width: 100%;
+  margin: 50px 0;
+}
+.about__content h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  color: #121212;
+  font-size: 32px;
+}
+.about__content--video {
+  width: 100%;
+}
+.about__content--video video {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

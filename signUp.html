@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./js/index.js"></script>
-    <title>Iniciar sesión - Near Home</title>
+    <script src="./js/signUp.js"></script>
+    <title>Registrarse - Near Home</title>
 </head>
 <body>
     <header class="header">
@@ -46,30 +47,61 @@
         </div>
     </header>
 
-    <section class="login">
-        <div class="login__content container-element">
-            <figure class="login__content--picture">
-                <img loading="lazy" src="./assets/img/login.jpeg" alt="Photo by Alexandr Podvalny from Pexels" title="Photo by Alexandr Podvalny from Pexels">
-                <img loading="lazy" src="./assets/brand/logo.svg" alt="Near Home" title="Near Home">
-            </figure>
-            <section class="login__content--info">
-                <h2>Iniciar sesión</h2>
-                <form action="./landing.html">
-                    <label for="user">usuario</label>
-                    <input id="email" name="email" placeholder="Email" type="email" required>
-                    <label for="password">contraseña</label>
-                    <input id="password" name="password" placeholder="**********" type="password" required>
-                    <a href="landing.html">¿Olvidaste la contraseña?</a>
-                    <button type="submit" class="btn btn-primary">iniciar sesión</button>
-                </form>
-                <div>
-                    <p>¿No tienes una cuenta?</p>
-                    <button onclick="window.location.href='signUp.html'" class="btn btn-secondary">registrarse</button>
+    <section class="signUp">
+        <div class="signUp__content container-element">
+            <section class="signUp__content--info">
+                <h2>Registro</h2>
+                <div class="signUp-progress">
+                    <button id="dot-one" class="dot dot-active">1</button>
+                    <button id="dot-two" class="dot">2</button>
+                    <button id="dot-three" class="dot">3</button>
+                    <div></div>
                 </div>
+                <form id="one-step" class="">
+                    <label for="email">email</label>
+                    <input id="email" name="email" placeholder="Email" type="email" required>
+                    <label for="password1">contraseña</label>
+                    <input id="password1" name="password1" placeholder="**********" type="password" required>
+                    <label for="confirmPassword1">confirmar contraseña</label>
+                    <input type="password" id="confirmPassword1" name="confirmPassword1" placeholder="**********" required>
+                    <div>
+                        <button class="btn btn-primary" onclick="step('two-step', 'dot-two')">siguiente</button>
+                    </div>
+                </form>
+                
+                <form id="two-step">
+                    <h4>Casi acabas!</h4>
+                    <label for="name">nombres</label>
+                    <input id="name" name="name" placeholder="Nombres" type="text" required>
+                    <label for="birth">fecha de nacimiento</label>
+                    <input id="birth" name="birth" type="date" required>
+                    <label for="phone">celular</label>
+                    <input type="tel" id="phone" name="phone" placeholder="3105649870" required>
+                    <div>
+                        <button class="btn btn-secondary">atrás</button>
+                        <button class="btn btn-primary">siguiente</button>
+                    </div>
+                </form>
+                <form id="three-step">
+                    <h4>Último paso!</h4>
+                    <label for="search">buscas</label>
+                    <select name="search" id="search">
+                        <option value="" selected disabled>selecciona una opción</option>
+                        <option value="arriendo">arriendo</option>
+                        <option value="compra">compra</option>
+                    </select>
+                    <section class="terms">
+                        <input id="terms" name="terms" type="checkbox" required>
+                        <label for="terms"><a href="#">Aceptas términos y condiciones</a></label>
+                    </section>
+                    <div>
+                        <button class="btn btn-secondary">atrás</button>
+                        <button class="btn btn-primary">registro</button>
+                    </div>
+                </form>
             </section>
         </div>
     </section>
-
 
     <footer class="footer">
         <div class="footer__content container-element">

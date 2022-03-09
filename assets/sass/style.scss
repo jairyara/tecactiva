@@ -4,9 +4,12 @@
 @import "./globals";
 
 @import "./libs/animations";
+@import "./libs/forms";
 
 @import "./components/elements/buttons";
 @import "./components/elements/header";
 @import "./components/elements/footer";
 
 @import "./components/views/login";
+@import "./components/views/signUp";
+@import "./components/views/landing";
