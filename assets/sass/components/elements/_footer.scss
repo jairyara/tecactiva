@@ -39,6 +39,12 @@
                             margin-bottom: 0;
                         }
 
+                        .current-footer {
+                            color: $primary-color;
+                            font-weight: 700;
+                            text-decoration: none;
+                        }
+
                         a {
                             color: $dark-color;
                             text-decoration: none;
@@ -59,8 +65,14 @@
                     grid-template-columns: repeat(auto-fill, 40px);
                     gap: 10px;
                     place-items: center;
-                    font-size: $xx-lg;
-                    color: $primary-dark-color;
+                    
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        font-size: $xx-lg;
+                        color: $primary-dark-color;
+                        cursor: pointer;
+                    }
                 }
             }
         }

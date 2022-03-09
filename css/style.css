@@ -128,6 +128,11 @@ body {
     margin-bottom: 0;
   }
 }
+.header__content--nav ul li .current {
+  color: #5463FF;
+  font-weight: 700;
+  text-decoration: underline;
+}
 .header__content--nav ul li a {
   font-size: 16px;
   text-decoration: none;
@@ -190,6 +195,11 @@ body {
 .footer__content--about nav ul li:last-child {
   margin-bottom: 0;
 }
+.footer__content--about nav ul li .current-footer {
+  color: #5463FF;
+  font-weight: 700;
+  text-decoration: none;
+}
 .footer__content--about nav ul li a {
   color: #121212;
   text-decoration: none;
@@ -204,8 +214,13 @@ body {
   grid-template-columns: repeat(auto-fill, 40px);
   gap: 10px;
   place-items: center;
+}
+.footer__content--about .footer-social div button {
+  border: none;
+  background-color: transparent;
   font-size: 32px;
   color: #0E3BCD;
+  cursor: pointer;
 }
 .footer__content--copyright {
   display: flex;
@@ -286,6 +301,9 @@ body {
 }
 .login__content--info form .btn-primary {
   margin: 0 auto;
+}
+.login__content--info form a {
+  color: #0E3BCD;
 }
 .login__content--info div p {
   margin-bottom: 15px;

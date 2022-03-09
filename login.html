@@ -26,7 +26,7 @@
                         <a href="landing.html">inicio</a>
                     </li>
                     <li>
-                        <a href="login.html">login</a>
+                        <a class="current" href="login.html">login</a>
                     </li>
                     <li>
                         <a href="signUp.html">registro</a>
@@ -59,18 +59,17 @@
                     <input id="email" name="email" placeholder="Email" type="email" required>
                     <label for="password">contraseña</label>
                     <input id="password" name="password" placeholder="**********" type="password" required>
-                    <a href="#">¿Olvidaste la contraseña?</a>
+                    <a href="landing.html">¿Olvidaste la contraseña?</a>
                     <button type="submit" class="btn btn-primary">iniciar sesión</button>
                 </form>
                 <div>
                     <p>¿No tienes una cuenta?</p>
-                    <button class="btn btn-secondary">registrarse</button>
+                    <button onclick="window.location.href='signUp.html'" class="btn btn-secondary">registrarse</button>
                 </div>
             </section>
         </div>
     </section>
-
-
+    
     <footer class="footer">
         <div class="footer__content container-element">
             <section class="footer__content--about">
@@ -91,7 +90,7 @@
                             <a href="landing.html">inicio</a>
                         </li>
                         <li>
-                            <a href="login.html">login</a>
+                            <a class="current-footer" href="login.html">login</a>
                         </li>
                         <li>
                             <a href="signUp.html">registro</a>
@@ -107,11 +106,21 @@
                 <div class="footer-social">
                     <h3>Síguenos en nuestras redes</h3>
                     <div>
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-whatsapp"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
+                        <button onclick="alert('Hola')" type="button" aria-label="Facebook" title="Facebook">
+                            <i aria-hidden="false" class="fab fa-facebook"></i>
+                        </button>
+                        <button onclick="alert('Hola')" type="button" aria-label="WhatsApp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                        <button onclick="alert('Hola')" type="button" aria-label="Twitter" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button onclick="alert('Hola')" type="button" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button onclick="alert('Hola')" type="button" aria-label="Linkedin" title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
                     </div>
                 </div>
             </section>
