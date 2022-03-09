@@ -1,0 +1,21 @@
+.btn {
+    width: 200px;
+    height: 45px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: $md;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &-primary {
+        background-color: $primary-color;
+        color: $light-color;
+        border: none;
+    }
+
+    &-secondary {
+        background-color: transparent;
+        border: 2px solid $primary-color;
+        color: $primary-dark-color;
+    }
+}

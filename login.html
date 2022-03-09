@@ -50,17 +50,22 @@
         <div class="login__content container-element">
             <figure class="login__content--picture">
                 <img loading="lazy" src="./assets/img/login.jpeg" alt="Photo by Alexandr Podvalny from Pexels" title="Photo by Alexandr Podvalny from Pexels">
+                <img loading="lazy" src="./assets/brand/logo.svg" alt="Near Home" title="Near Home">
             </figure>
             <section class="login__content--info">
                 <h2>Iniciar sesión</h2>
-                <form action="landing.html" method="post">
+                <form action="./landing.html">
                     <label for="user">usuario</label>
-                    <input id="email" name="email" placeholder="email" type="email" required>
+                    <input id="email" name="email" placeholder="Email" type="email" required>
                     <label for="password">contraseña</label>
                     <input id="password" name="password" placeholder="**********" type="password" required>
                     <a href="#">¿Olvidaste la contraseña?</a>
-                    <button type="submit" class="btn-primary">iniciar sesión</button>
+                    <button type="submit" class="btn btn-primary">iniciar sesión</button>
                 </form>
+                <div>
+                    <p>¿No tienes una cuenta?</p>
+                    <button class="btn btn-secondary">registrarse</button>
+                </div>
             </section>
         </div>
     </section>
@@ -69,12 +74,12 @@
     <footer class="footer">
         <div class="footer__content container-element">
             <section class="footer__content--about">
-                <figure>
-                    <a href="landing.html">
-                        <img class="brand-logo" loading="lazy" src="./assets/brand/logo.svg" alt="Near Home" title="Near Home">
-                    </a>
-                </figure>
-                <div>
+                <div class="footer-brand">
+                    <figure>
+                        <a href="landing.html">
+                            <img class="brand-logo" loading="lazy" src="./assets/brand/logo.svg" alt="Near Home" title="Near Home">
+                        </a>
+                    </figure>
                     <p>Calle 80 # 457- 456</p>
                     <p>Teléfono: 57456565</p>
                     <p>Email: hola@nearhome.com</p>
@@ -99,7 +104,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div>
+                <div class="footer-social">
                     <h3>Síguenos en nuestras redes</h3>
                     <div>
                         <i class="fab fa-facebook"></i>
@@ -110,6 +115,11 @@
                     </div>
                 </div>
             </section>
+            <div class="footer__content--copyright">
+                <p>
+                    © 2022 - Near Home - Todos los derechos reservados
+                </p>
+            </div>
         </div>
     </footer>
 </body>
