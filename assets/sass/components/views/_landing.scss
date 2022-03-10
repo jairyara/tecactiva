@@ -100,8 +100,11 @@
         }
         &--card {
             display: grid;
-            grid-template-columns: 100px 250px;
+            grid-template-columns: 100px 200px;
             gap: 10px;
+            @include for-tablet-landscape-up {
+                grid-template-columns: 100px 250px;
+            }
             figure {
                 width: 100%;
                 @include flex(center,

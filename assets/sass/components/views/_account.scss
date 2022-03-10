@@ -1,0 +1,50 @@
+.account {
+    margin: 40px 0;
+    min-height: 50vh;
+
+    &__content {
+        height: 100%;
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: $xx-lg;
+        }
+
+        .show {
+            display: flex;
+            animation: fadeIn 1s both;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        &--info {
+            height: 45vh;
+            @include flex(flex-start, space-between, column);
+            @include for-tablet-landscape-up {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            h4 {
+                margin-bottom: 20px;
+                font-size: $md;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        &--form {
+            height: 45vh;
+            @include flex(flex-start, space-between, column);
+            display: none;
+            @include for-tablet-landscape-up {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
