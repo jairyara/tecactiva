@@ -9,8 +9,10 @@
     <meta name="keywords" content="vivienda, arriendo, compra, vivienda nueva, vivienda usada">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./js/index.js"></script>
+    <script src="./js/animations.js"></script>
     <title>Inicio - Near Home</title>
 </head>
 
@@ -49,8 +51,8 @@
     </header>
 
     <section class="hero">
-        <div class="hero__content container-element">
-            <h1>
+        <div data-aos="zoom-in" data-aos-duration="500" class="hero__content container-element">
+            <h1 >
                 Consigue los mejores inmuebles cercanos a tu ubicación
             </h1>
             <button class="btn btn-primary" onclick="window.location.href='signUp.html'">registrarse</button>
@@ -59,7 +61,7 @@
 
     <section class="projects">
         <div class="projects__content container-element">
-            <figure class="projects__content--img">
+            <figure data-aos="fade-right" data-aos-duration="1000" class="projects__content--img">
                 <img loading="lazy" src="./assets/img/about.jpeg" alt="Photo by The Lazy Artist Gallery from Pexels" title="Photo by The Lazy Artist Gallery from Pexels">
             </figure>
             <article class="projects__content--description">
@@ -79,7 +81,7 @@
     <section class="about">
         <div class="about__content container-element">
             <h2>Conócenos</h2>
-            <figure class="about__content--video">
+            <figure data-aos="zoom-out" data-aos-duration="1000" class="about__content--video">
                 <video loading="lazy" src="./assets/videos/video.mp4" title="Video" controls preload="auto"></video>
             </figure>
         </div>
@@ -87,7 +89,7 @@
 
     <section class="reasons">
         <div class="reasons__content container-element">
-            <article class="reasons__content--card">
+            <article data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="reasons__content--card">
                 <figure>
                     <img src="./assets/icons/real-estate.png" alt="Real estate icons created by Freepik - Flaticon" title="Real estate icons created by Freepik - Flaticon">
                 </figure>
@@ -97,7 +99,7 @@
                     </p>
                 </div>
             </article>
-            <article class="reasons__content--card">
+            <article data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="reasons__content--card">
                 <figure>
                     <img src="./assets/icons/real-estate2.png" alt="Real estate icons created by Freepik - Flaticon" title="Real estate icons created by Freepik - Flaticon">
                 </figure>
@@ -107,7 +109,7 @@
                     </p>
                 </div>
             </article>
-            <article class="reasons__content--card">
+            <article data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="reasons__content--card">
                 <figure>
                     <img src="./assets/icons/real-estate3.png" alt="Real estate icons created by Freepik - Flaticon" title="Real estate icons created by Freepik - Flaticon">
                 </figure>
@@ -117,7 +119,7 @@
                     </p>
                 </div>
             </article>
-            <article class="reasons__content--card">
+            <article data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="reasons__content--card">
                 <figure>
                     <img src="./assets/icons/real-estate.png" alt="Real estate icons created by Freepik - Flaticon" title="Real estate icons created by Freepik - Flaticon">
                 </figure>
@@ -127,7 +129,7 @@
                     </p>
                 </div>
             </article>
-            <article class="reasons__content--card">
+            <article data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="reasons__content--card">
                 <figure>
                     <img src="./assets/icons/real-estate2.png" alt="Real estate icons created by Freepik - Flaticon" title="Real estate icons created by Freepik - Flaticon">
                 </figure>
@@ -137,7 +139,7 @@
                     </p>
                 </div>
             </article>
-            <article class="reasons__content--card">
+            <article data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="reasons__content--card">
                 <figure>
                     <img src="./assets/icons/real-estate3.png" alt="Real estate icons created by Freepik - Flaticon" title="Real estate icons created by Freepik - Flaticon">
                 </figure>
@@ -221,6 +223,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

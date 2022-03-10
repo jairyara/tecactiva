@@ -445,7 +445,7 @@ input[type=checkbox] {
 
 .projects {
   width: 100%;
-  margin: 50px 0;
+  margin: 100px 0;
 }
 @media (min-width: 900px) {
   .projects__content {
@@ -478,7 +478,8 @@ input[type=checkbox] {
 
 .about {
   width: 100%;
-  margin: 50px 0;
+  margin: 100px 0;
+  overflow: hidden;
 }
 .about__content h2 {
   margin-bottom: 50px;
@@ -492,10 +493,18 @@ input[type=checkbox] {
 .about__content--video video {
   width: 100%;
 }
+@media (min-width: 900px) {
+  .about__content--video video {
+    margin: 0 auto;
+    display: grid;
+    width: 70%;
+  }
+}
 
 .reasons {
   width: 100%;
-  margin: 50px 0;
+  margin: 100px 0;
+  overflow: hidden;
 }
 .reasons__content {
   width: 100%;

@@ -9,8 +9,6 @@
             text-align: center;
         }
 
-        
-
         &--table {
         overflow-x: scroll;
 
@@ -46,7 +44,7 @@
 
         &--canva {
             margin-bottom: 50px;
-            
+
             canvas {
                 width: 100%;
                 height: auto;
@@ -57,11 +55,5 @@
                 }
             }
         }
-
-        
-
-        
-
-        
     }
 }
