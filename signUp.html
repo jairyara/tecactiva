@@ -10,8 +10,6 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./js/index.js"></script>
-    <script src="./js/signUp.js"></script>
-    <script src="./js/password.js"></script>
     <title>Registrarse - Near Home</title>
 </head>
 <body>
@@ -53,51 +51,48 @@
             <section class="signUp__content--info">
                 <h2>Registro</h2>
                 <div class="signUp-progress">
-                    <button id="dot-one" class="dot ">1</button>
+                    <button id="dot-one" class="dot">1</button>
                     <button id="dot-two" class="dot">2</button>
                     <button id="dot-three" class="dot">3</button>
                     <div></div>
                 </div>
-                <form id="one-step">
-                    <label for="email">email</label>
-                    <input id="email" name="email" placeholder="Email" type="email" required>
-                    <label for="password">contraseña</label>
-                    <input id="password" name="password" placeholder="**********" type="password" required>
-                    <label for="confirmPassword">confirmar contraseña</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="**********" required>
-                    <div>
-                        <button id="btn-first" class="btn btn-primary" onclick="matchPassword(); ">siguiente</button>
+                <form id="signUp" action="landing.html">
+                    <div class="step" id="one-step" action="#">
+                        <label for="email">email</label>
+                        <input id="email" name="email" placeholder="Email" type="email" required>
+                        <label for="password">contraseña</label>
+                        <input id="password" name="password" placeholder="**********" type="password" required>
+                        <label for="confirmPassword">confirmar contraseña</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="**********" required>
                     </div>
-                </form>
-                
-                <form id="two-step">
-                    <h4>Casi acabas!</h4>
-                    <label for="name">nombres</label>
-                    <input id="name" name="name" placeholder="Nombres" type="text" required>
-                    <label for="birth">fecha de nacimiento</label>
-                    <input id="birth" name="birth" type="date" required>
-                    <label for="phone">celular</label>
-                    <input type="tel" id="phone" name="phone" placeholder="3105649870" required>
-                    <div>
-                        <button class="btn btn-secondary">atrás</button>
-                        <button class="btn btn-primary">siguiente</button>
+                    <div class="step" id="two-step">
+                        <h4>Casi acabas!</h4>
+                        <label for="name">nombres</label>
+                        <input id="name" name="name" placeholder="Nombres" type="text" required>
+                        <label for="birth">fecha de nacimiento</label>
+                        <input id="birth" name="birth" type="date" required>
+                        <label for="phone">celular</label>
+                        <input type="tel" id="phone" name="phone" placeholder="3105649870" required>
                     </div>
-                </form>
-                <form id="three-step">
-                    <h4>Último paso!</h4>
-                    <label for="search">buscas</label>
-                    <select name="search" id="search">
-                        <option value="" selected disabled>selecciona una opción</option>
-                        <option value="arriendo">arriendo</option>
-                        <option value="compra">compra</option>
-                    </select>
-                    <section class="terms">
-                        <input id="terms" name="terms" type="checkbox" required>
-                        <label for="terms"><a href="#">Aceptas términos y condiciones</a></label>
-                    </section>
-                    <div>
-                        <button class="btn btn-secondary">atrás</button>
-                        <button class="btn btn-primary">registro</button>
+                    <div class="step" id="three-step">
+                        <h4>Último paso!</h4>
+                        <label for="search">buscas</label>
+                        <select name="search" id="search" required>
+                            <option value="" selected disabled>selecciona una opción</option>
+                            <option value="arriendo">arriendo</option>
+                            <option value="compra">compra</option>
+                        </select>
+                        <section class="terms">
+                            <input id="terms" name="terms" type="checkbox" required>
+                            <label for="terms"><a href="#">Aceptas términos y condiciones</a></label>
+                        </section>
+                    </div>
+                    <div class="buttons" id="buttons">
+                        <button type="button" id="prev-btn" class="btn btn-secondary" onclick="nextPrev(-1)">atrás</button>
+                        <button type="button" id="next-btn" class="btn btn-primary" onclick="nextPrev(1)">siguiente</button>
+                    </div>
+                    <div class="message" id="msg">
+                        <h3>Redirigiendo ...</h3>
                     </div>
                 </form>
             </section>
@@ -165,5 +160,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/signUp.js"></script>
+
 </body>
 </html>

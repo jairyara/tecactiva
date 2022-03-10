@@ -1,92 +1,96 @@
 .signUp {
-    width: 100%;
-    min-height: 60vh;
+  width: 100%;
+  min-height: 60vh;
 
-    &__content {
-        &--info {
-            h2 {
-                margin: 50px 0;
-                font-size: $xx-lg;
-                color: $dark-color;
-                text-align: center;
-            }
+  &__content {
+    &--info {
+      h2 {
+        margin: 50px 0;
+        font-size: $xx-lg;
+        color: $dark-color;
+        text-align: center;
+      }
 
-            .signUp-progress {
-                margin-bottom: 30px;
-                @include flex(center, space-around);
-                
-                .dot {
-                    position: relative;
-                    width: 60px;
-                    height: 60px;
-                    background-color: $gray-color;
-                    border: 1px solid $primary-dark-color;
-                    border-radius: 50%;
+      .signUp-progress {
+        margin-bottom: 30px;
+        @include flex(center, space-around);
 
-                    &-active {
-                        background-color: $primary-color;
-                        color: $light-color;
-                        font-size: $md;
-                        font-weight: 600;
-                    }
-                }
+        .dot {
+          position: relative;
+          width: 60px;
+          height: 60px;
+          background-color: $gray-color;
+          border: 1px solid $primary-dark-color;
+          border-radius: 50%;
 
-                div {
-                    position: absolute;
-                    z-index: -1;
-                    width: 60%;
-                    height: 1px;
-                    border: 1px solid $primary-dark-color;
-                }
-            }
-
-            & form:nth-child(4), & form:nth-child(5) {
-                display: none;
-            }
-
-            form {
-                width: 100%;
-                height: 100%;
-                min-height: 320px;
-                margin-bottom: 30px;
-                @include flex(flex-start, space-around, column);
-                @include for-tablet-landscape-up {
-                    width: 60%;
-                    margin: 0 auto;
-                }
-
-                div {
-                    width: 100%;
-                    @include flex(center, flex-end);
-
-                    .btn-secondary {
-                        margin-right: 10px;
-                    }
-                }
-
-                h4 {
-                    width: 100%;
-                    font-size: $md;
-                    text-align: center;
-                }
-
-                .terms {
-                    @include flex(center, flex-start);
-                    
-                    input {
-                        margin-right: 15px;
-                    }
-                }
-            }
-
-            .step-active {
-                display: flex;
-                animation: fadeIn 1s both;
-            }
-
-            .step-disable {
-                display: none;
-            }
+          &.active {
+            background-color: $primary-color;
+            color: $light-color;
+            font-size: $md;
+            font-weight: 600;
+          }
         }
+
+        div {
+          position: absolute;
+          z-index: -1;
+          width: 60%;
+          height: 1px;
+          border: 1px solid $primary-dark-color;
+        }
+      }
+
+      form {
+        .step {
+          width: 100%;
+          height: 100%;
+          min-height: 320px;
+          margin-bottom: 30px;
+          @include flex(flex-start, space-around, column);
+          @include for-tablet-landscape-up {
+            width: 60%;
+            margin: 0 auto;
+          }
+          display: none;
+
+          input.invalid {
+            background-color: #ffdddd;
+          }
+
+          .terms {
+              @include flex(center, flex-start);
+
+              & :first-child{
+                  margin-right: 20px;
+              }
+          }
+        }
+        .buttons {
+            width: 100%;
+            @include flex(center, flex-end);
+
+            @include for-tablet-landscape-up {
+                width: 60%;
+                margin: 0 auto;
+              }
+
+            .btn-secondary {
+              margin-right: 10px;
+            }
+          }
+          .disabled {
+              display: none;
+          }
+          .message {
+              display: none;
+              place-content: center;
+              place-items: center;
+          }
+
+          .msg-active {
+              display: grid;
+          }
+      }
     }
+  }
 }
