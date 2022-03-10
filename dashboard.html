@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/dashboard.js"></script>
     <script type="module" src="./js/index.js"></script>
-    <title>Iniciar sesión - Near Home</title>
+    <title>Dashboard - Near Home</title>
 </head>
 <body>
     <header class="header">
@@ -46,30 +48,31 @@
         </div>
     </header>
 
-    <section class="login">
-        <div class="login__content container-element">
-            <figure class="login__content--picture">
-                <img loading="lazy" src="./assets/img/login.jpeg" alt="Photo by Alexandr Podvalny from Pexels" title="Photo by Alexandr Podvalny from Pexels">
-                <img loading="lazy" src="./assets/brand/logo.svg" alt="Near Home" title="Near Home">
-            </figure>
-            <section class="login__content--info">
-                <h2>Iniciar sesión</h2>
-                <form action="./landing.html">
-                    <label for="user">usuario</label>
-                    <input id="email" name="email" placeholder="Email" type="email" required>
-                    <label for="password">contraseña</label>
-                    <input id="password" name="password" placeholder="**********" type="password" required>
-                    <a href="landing.html">¿Olvidaste la contraseña?</a>
-                    <button type="submit" class="btn btn-primary">iniciar sesión</button>
-                </form>
-                <div>
-                    <p>¿No tienes una cuenta?</p>
-                    <button onclick="window.location.href='signUp.html'" class="btn btn-secondary">registrarse</button>
-                </div>
-            </section>
+    <section class="dashboard">
+        <div class="dashboard__content container-element">
+            <div class="dashboard__content--table">
+                <h2>Datos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>Nick</td>
+                            <td>Email</td>
+                            <td>Ciudad</td>
+                            <td>Celular</td>
+                            <td>Website</td>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>
+                </table>
+            </div>
+            <h2>Gráfica</h2>
+            <div class="dashboard__content--canva">
+                <canvas id="myChart" ></canvas>
+            </div>
         </div>
     </section>
-
 
     <footer class="footer">
         <div class="footer__content container-element">
@@ -132,5 +135,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/graph.js"></script>
+
 </body>
 </html>

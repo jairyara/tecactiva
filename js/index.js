@@ -17,3 +17,10 @@ save.addEventListener('click', async () => {
     const module = await import('./showHide.js');
     module.showHide();
 })
+
+const btnFirst = document.getElementById('btn-first');
+
+btnFirst.addEventListener('click', async () => {
+    const module = await import('./signUp.js');
+    module.wizard();
+})
